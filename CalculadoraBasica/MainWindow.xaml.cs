@@ -45,7 +45,14 @@ namespace CalculadoraBasica
                         ResultadoTextBox.Text = (operando1 * operando2).ToString();
                         break;
                     case "/":
-                        ResultadoTextBox.Text = (operando1 / operando2).ToString();
+                        if(operando2 == 0)
+                        {
+                            ResultadoTextBox.Text = "Infinito";
+                        }
+                        else
+                        {
+                            ResultadoTextBox.Text = (operando1 / operando2).ToString();
+                        }
                         break;
                 }
 
